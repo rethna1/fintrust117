@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>MF Distributor Landing Page – Demo</title>
+
+<!-- Bootstrap CDN -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+/* ---------------------------
+   COLOUR SYSTEM
+----------------------------- */
+:root {
+  --primary:#00a37a;
+  --primary-dark:#008f6b;
+
+  --btn-green:#00a37a;
+  --btn-green-dark:#008a62;
+
+  --text-dark:#1e293b;
+  --text-light:#ffffff;
+
+  --bg-light:#f8f9fa;
+  --bg-white:#ffffff;
+}
+
+/* GLOBAL */
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg-light);
+  color: var(--text-dark);
+}
+
+/* HEADER */
+header {
+  background: var(--bg-white);
+  padding: 15px 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.round-logo {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: var(--primary);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  margin-right: 10px;
+}
+
+/* HERO */
+.hero {
+  text-align:center;
+  padding:80px 20px;
+  background:var(--bg-white);
+}
+.hero h1 { font-size:2.4rem; font-weight:700; }
+.hero p { font-size:1.1rem; max-width:650px; margin:10px auto 25px; color:#555; }
+
+/* BUTTON */
+.btn-main {
+  background:var(--btn-green);
+  color:#fff !important;
+  padding:14px 34px;
+  border-radius:8px;
+  font-size:1.1rem;
+  font-weight:600;
+  text-decoration:none;
+}
+.btn-main:hover { background:var(--btn-green-dark); }
+
+/* SECTIONS */
+.section-title {
+  font-size:2rem;
+  text-align:center;
+  font-weight:700;
+  margin-bottom:25px;
+}
+
+/* PHONE PREVIEW */
+.phone-frame {
+  width: 340px;
+  height: 600px;
+  border: 2px solid #999;
+  border-radius: 30px;
+  overflow: hidden;
+  position: relative;
+}
+.phone-screen { width: 100%; height: 100%; border: 0; }
+
+/* small preview buttons */
+.preview-controls {
+  display:flex;
+  gap:12px;
+  justify-content:center;
+  margin-top:16px;
+}
+.preview-btn {
+  background:#f3f4f6;
+  border:1px solid #d1d5db;
+  padding:8px 14px;
+  border-radius:8px;
+  cursor:pointer;
+  font-weight:600;
+  color:#111827;
+}
+.preview-btn.active {
+  background:var(--btn-green);
+  color:#fff;
+  border-color:var(--btn-green-dark);
+}
+.preview-btn:focus { outline:none; box-shadow:0 0 0 3px rgba(0,163,122,0.12); }
+</style>
+<style>
+p {
+  text-align: justify;
+  text-justify: inter-word;
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="container d-flex align-items-center">
+    <div class="round-logo">FC</div>
+    <h2 style="font-weight:700; color:var(--primary); margin:0;">FinTrust Creations</h2>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <h1>Professional Mutual Fund Calculators for Distributors</h1>
+  <p>Boost your client engagement, AUM, and conversions with easy-to-use, branded MF calculators.</p>
+  <a href="#features" class="btn-main">Explore Calculators</a>
+</section>
+
+<!-- FEATURES SECTION -->
+<section id="features" class="container py-5">
+  <h2 class="section-title">Our Financial Tools</h2>
+
+  <div class="row g-4">
+
+    <div class="col-md-6 col-lg-4">
+      <div style="background:#fff; padding:25px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.05);">
+        <h4 style="color:var(--primary); font-weight:600;">4-in-1 Mutual Fund Master Planner</h4>
+        <p>Includes SIP, SWP, Goal & Lump sum calculators for complete planning.</p>
+      </div>
+    </div>
+
+    <div class="col-md-6 col-lg-4">
+      <div style="background:#fff; padding:25px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.05);">
+        <h4 style="color:var(--primary); font-weight:600;">SIP & Limited SIP Planner</h4>
+        <p>Easily estimate SIP growth and plan fixed-duration SIPs professionally.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+    <h2 class="section-title">Why Every MF Distributor Needs These Calculators</h2>
+  <div class="col-md-6 col-lg-4">
+      <div style="background:#fff; padding:25px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.05);">
+    <div class="col-md-6 col-lg-4">
+      <div style="background:#fff; padding:25px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.05);">
+        <h4 style="color:var(--primary); font-weight:600;">Benefits to Investors</h4>
+        <p>	Clients calculate SIP/Lumpsum instantly, 
+	Helps investors understand returns better, 
+	Builds trust & professional image, 
+	Saves time in explanations, 
+	Helps in client acquisition
+	Increases conversions from leads, and 
+	Works perfectly on mobile & WhatsApp.
+</p>
+      </div>
+        <div class="col-md-6 col-lg-4">
+      <div style="background:#fff; padding:25px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.05);">
+        <h4 style="color:var(--primary); font-weight:600;">Benefits for Distributors</h4>
+        <p>Present calculator results during meetings, 
+	Share calculators in WhatsApp groups, 
+	Add calculators to your landing page, 
+	Impress HNI clients with advanced tools, 
+	Use them for lead generation, and 
+	Educate clients without effort
+.</p>
+      </div>
+    </div>
+    </div>
+      </div>
+    </div>
+
+
+<!-- PREVIEW SECTION -->
+<section class="container py-5">
+  <h2 class="section-title">Live Planner Preview</h2>
+
+  <div class="d-flex justify-content-center">
+    <div class="phone-frame">
+
+      <!-- main iframe (default preview) -->
+      <iframe id="previewFrame" class="phone-screen"
+        srcdoc="
+          <html>
+          <body style='margin:0;padding:0;text-align:center;background:#fff;'>
+            <img 
+              src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQH6GbXa2Cat0J4QdSN_RRFGPIRlRtYCI5IsWHOOB1O-A31S2ANNOnrN5jOuZlkcLwckXotSnhZWlk-f8gjk2layMzycPVsN1Tj6WOF80uxpcJaYuJootQbIzfMntyBAa0FXAFm47xiqcInav7zOSDJPcvJ0qo0YI17UqucJ3wmbLvu0I5RvsW-T-8bFhi/s3453/IMG_4686.jpeg'
+              style='width:100%; height:auto; display:block;'
+            />
+          </body>
+          </html>
+        ">
+      </iframe>
+
+    </div>
+  </div>
+
+  <!-- NEW: preview buttons below iframe -->
+  <div class="preview-controls" role="tablist" aria-label="Preview controls">
+    <button class="preview-btn active" id="btn1" onclick="showPreview(1)">Preview 1</button>
+    <button class="preview-btn" id="btn2" onclick="showPreview(2)">Preview 2</button>
+  </div>
+
+</section>
+
+<!-- PRICING SECTION -->
+<section class="container py-5">
+  <h2 class="section-title">Pricing</h2>
+
+  <div style="display:flex; justify-content:center;">
+    <div style="
+      background:#e6fff2;
+      padding:30px;
+      border-radius:20px;
+      max-width:380px;
+      width:100%;
+      font-family:'Inter', sans-serif;
+    ">
+
+      <!-- Item 1 -->
+      <div style="display:flex; align-items:center; margin-bottom:8px;">
+        <span style="font-size:1.7rem; margin-right:10px;">✅</span>
+        <span style="font-weight:600; font-size:1.25rem;">2-in-1 SIP Planner –</span>
+      </div>
+
+      <div style="color:#008f6b; font-size:1.8rem; font-weight:700; margin-bottom:22px; margin-left:42px;">
+        ₹499
+      </div>
+
+      <!-- Item 2 -->
+      <div style="display:flex; align-items:center; margin-bottom:8px;">
+        <span style="font-size:1.7rem; margin-right:10px;">✅</span>
+        <span style="font-weight:600; font-size:1.25rem;">4-in-1 Master Planner –</span>
+      </div>
+
+      <div style="color:#008f6b; font-size:1.8rem; font-weight:700; margin-left:42px;">
+        ₹999
+      </div>
+
+    </div>
+  </div>
+
+  <div class="text-center mt-4">
+    <a href="https://forms.gle/d9qqzLeaw49JycRb9" class="btn-main">Get Your Planner</a>
+  </div>
+</section>
+  <style>
+  :root {
+    --btn-green:#00a37a;       /* SAME AS LANDING PAGE */
+    --btn-green-dark:#008a62;  /* SAME AS LANDING PAGE HOVER */
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  #contact-container {
+    padding: 30px 0;
+    text-align: left;
+  }
+
+  #contact-title {
+    font-size: 32px;
+    margin-left: 20px;
+    color: #0d1b2a;
+    font-weight: 700;
+  }
+
+  .contact-card {
+    background: #e5f6f2;
+    width: 92%;
+    max-width: 380px;
+    margin: 25px auto;
+    padding: 30px;
+    border-radius: 18px;
+    box-sizing: border-box;
+  }
+
+  .contact-card h3 {
+    text-align: center;
+    color: #0d1b2a;
+    font-size: 24px;
+    margin-bottom: 25px;
+    font-weight: 700;
+  }
+
+  .contact-card input,
+  .contact-card textarea {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #dcdcdc;
+    border-radius: 12px;
+    margin-bottom: 16px;
+    font-size: 16px;
+    box-sizing: border-box;
+  }
+
+  .contact-card textarea {
+    height: 110px;
+  }
+
+  /* BUTTON WITH LANDING PAGE GREEN */
+  .contact-card button {
+    width: 100%;
+    padding: 15px;
+    background: var(--btn-green);
+    color: white;
+    border: none;
+    font-size: 18px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: 600;
+  }
+
+  .contact-card button:hover {
+    background: var(--btn-green-dark);
+  }
+</style>
+
+
+<section id="contact-container">
+  <h2 id="contact-title">Get In Touch</h2>
+
+  <div class="contact-card">
+    <h3>Send Message</h3>
+
+    <form
+      id="contactForm"
+      action="mailto:fintrustcreations@gmail.com"
+      method="POST"
+      enctype="text/plain"
+    >
+      <input type="text" name="Name" placeholder="Name" required>
+      <input type="email" name="Email" placeholder="Email" required>
+      <textarea name="Message" placeholder="Write Your Message" required></textarea>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</section>
+
+<script>
+  // Clear fields after clicking submit
+  document.getElementById("contactForm").addEventListener("submit", function () {
+    setTimeout(() => {
+      document.getElementById("contactForm").reset();
+    }, 200);
+  });
+</script>
+
+<!-- FOOTER -->
+<footer style="text-align:center; padding:25px; color:#666; background:#fff;">
+  ©️ <span id="year"></span> FinTrust Creations. All Rights Reserved.
+</footer>
+
+<script>
+// JS to switch previews
+const previewFrame = document.getElementById('previewFrame');
+const btn1 = document.getElementById('btn1');
+const btn2 = document.getElementById('btn2');
+
+function setActiveButton(activeBtn) {
+  [btn1, btn2].forEach(b => b.classList.remove('active'));
+  activeBtn.classList.add('active');
+}
+
+function showPreview(n) {
+  if (n === 1) {
+    // Preview 1 (original)
+    previewFrame.srcdoc = `
+      <html>
+      <body style="margin:0;padding:0;text-align:center;background:#fff;">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQH6GbXa2Cat0J4QdSN_RRFGPIRlRtYCI5IsWHOOB1O-A31S2ANNOnrN5jOuZlkcLwckXotSnhZWlk-f8gjk2layMzycPVsN1Tj6WOF80uxpcJaYuJootQbIzfMntyBAa0FXAFm47xiqcInav7zOSDJPcvJ0qo0YI17UqucJ3wmbLvu0I5RvsW-T-8bFhi/s3453/IMG_4686.jpeg" style="width:100%;height:auto;display:block;" />
+      </body>
+      </html>
+    `;
+    setActiveButton(btn1);
+  } else {
+    // Preview 2 (second image)
+    previewFrame.srcdoc = `
+      <html>
+      <body style="margin:0;padding:0;text-align:center;background:#fff;">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhbdvbrkSGJMlgItGK6LNP3DFUOgroztEtiirUFkBLAslMBesosJYQb3xKq_Nxb_VHhEgJ4lHbjXPy2CTIJlERo8NKjVR-LkGdAki3vJhXaB646mGxKYLgTlXjt7vofxY4wzb9-lXLmLIxoQ-52E2pQfX_7OLclwLUbUHvwxrEyU3s85_V85oF5qsfEzLQy/s3293/IMG_4690.jpeg" style="width:100%;height:auto;display:block;" />
+      </body>
+      </html>
+    `;
+    setActiveButton(btn2);
+  }
+}
+
+// ensure default shows preview 1
+showPreview(1);
+
+// update year
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
