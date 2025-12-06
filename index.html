@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>MF Distributor Landing Page – Demo</title>
 
-<!-- Bootstrap CDN -->
+<!-- Bootstrap CSS -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
 <style>
@@ -36,9 +36,10 @@ body {
 /* HEADER */
 header {
   background: var(--bg-white);
-  padding: 15px 0;
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  padding: 8px 0;
 }
+
 .round-logo {
   width: 45px;
   height: 45px;
@@ -92,7 +93,7 @@ header {
 }
 .phone-screen { width: 100%; height: 100%; border: 0; }
 
-/* small preview buttons */
+/* preview buttons */
 .preview-controls {
   display:flex;
   gap:12px;
@@ -113,23 +114,55 @@ header {
   color:#fff;
   border-color:var(--btn-green-dark);
 }
-.preview-btn:focus { outline:none; box-shadow:0 0 0 3px rgba(0,163,122,0.12); }
 </style>
+
 <style>
 p {
   text-align: justify;
   text-justify: inter-word;
 }
 </style>
+
 </head>
 <body>
 
-<!-- HEADER -->
+<!-- HEADER WITH NAVIGATION -->
 <header>
-  <div class="container d-flex align-items-center">
-    <div class="round-logo">FC</div>
-    <h2 style="font-weight:700; color:var(--primary); margin:0;">FinTrust Creations</h2>
-  </div>
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+
+      <!-- Logo + Title -->
+      <div class="d-flex align-items-center">
+        <div class="round-logo">FC</div>
+        <h2 style="font-weight:700; color:var(--primary); margin:0;">FinTrust Creations</h2>
+      </div>
+
+      <!-- Right-side hamburger -->
+      <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#mainMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Menu -->
+      <div class="collapse navbar-collapse justify-content-end" id="mainMenu">
+        <ul class="navbar-nav" style="font-weight:600; font-size:1.1rem;">
+
+          <li class="nav-item">
+            <a class="nav-link" href="#features" style="color:#1e293b;">Calculator</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#about" style="color:#1e293b;">About</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#contact-container" style="color:#1e293b;">Contact</a>
+          </li>
+
+        </ul>
+      </div>
+
+    </div>
+  </nav>
 </header>
 
 <!-- HERO -->
@@ -161,37 +194,23 @@ p {
 
   </div>
 </section>
-    <h2 class="section-title">Why Every MF Distributor Needs These Calculators</h2>
-  <div class="col-md-6 col-lg-4">
-      <div style="background:#fff; padding:25px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.05);">
-    <div class="col-md-6 col-lg-4">
-      <div style="background:#fff; padding:25px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.05);">
-        <h4 style="color:var(--primary); font-weight:600;">Benefits to Investors</h4>
-        <p>	Clients calculate SIP/Lumpsum instantly, 
-	Helps investors understand returns better, 
-	Builds trust & professional image, 
-	Saves time in explanations, 
-	Helps in client acquisition
-	Increases conversions from leads, and 
-	Works perfectly on mobile & WhatsApp.
-</p>
-      </div>
-        <div class="col-md-6 col-lg-4">
-      <div style="background:#fff; padding:25px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.05);">
-        <h4 style="color:var(--primary); font-weight:600;">Benefits for Distributors</h4>
-        <p>Present calculator results during meetings, 
-	Share calculators in WhatsApp groups, 
-	Add calculators to your landing page, 
-	Impress HNI clients with advanced tools, 
-	Use them for lead generation, and 
-	Educate clients without effort
-.</p>
-      </div>
-    </div>
-    </div>
-      </div>
-    </div>
 
+<h2 class="section-title">Why Every MF Distributor Needs These Calculators</h2>
+
+<div class="col-md-6 col-lg-4">
+  <div style="background:#fff; padding:25px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.05);">
+    <h4 style="color:var(--primary); font-weight:600;">Benefits to Investors</h4>
+    <p>Clients calculate SIP/Lumpsum instantly, Helps investors understand returns better, Builds trust & professional image, Saves time,
+    Helps in client acquisition, Works on mobile & WhatsApp.</p>
+  </div>
+</div>
+
+<div class="col-md-6 col-lg-4">
+  <div style="background:#fff; padding:25px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.05);">
+    <h4 style="color:var(--primary); font-weight:600;">Benefits for Distributors</h4>
+    <p>Present results in meetings, Share in WhatsApp groups, Add to landing page, Impress HNIs, Generate leads.</p>
+  </div>
+</div>
 
 <!-- PREVIEW SECTION -->
 <section class="container py-5">
@@ -199,8 +218,6 @@ p {
 
   <div class="d-flex justify-content-center">
     <div class="phone-frame">
-
-      <!-- main iframe (default preview) -->
       <iframe id="previewFrame" class="phone-screen"
         srcdoc="
           <html>
@@ -213,12 +230,10 @@ p {
           </html>
         ">
       </iframe>
-
     </div>
   </div>
 
-  <!-- NEW: preview buttons below iframe -->
-  <div class="preview-controls" role="tablist" aria-label="Preview controls">
+  <div class="preview-controls">
     <button class="preview-btn active" id="btn1" onclick="showPreview(1)">Preview 1</button>
     <button class="preview-btn" id="btn2" onclick="showPreview(2)">Preview 2</button>
   </div>
@@ -238,8 +253,6 @@ p {
       width:100%;
       font-family:'Inter', sans-serif;
     ">
-
-      <!-- Item 1 -->
       <div style="display:flex; align-items:center; margin-bottom:8px;">
         <span style="font-size:1.7rem; margin-right:10px;">✅</span>
         <span style="font-weight:600; font-size:1.25rem;">2-in-1 SIP Planner –</span>
@@ -249,7 +262,6 @@ p {
         ₹499
       </div>
 
-      <!-- Item 2 -->
       <div style="display:flex; align-items:center; margin-bottom:8px;">
         <span style="font-size:1.7rem; margin-right:10px;">✅</span>
         <span style="font-weight:600; font-size:1.25rem;">4-in-1 Master Planner –</span>
@@ -266,7 +278,23 @@ p {
     <a href="https://forms.gle/d9qqzLeaw49JycRb9" class="btn-main">Get Your Planner</a>
   </div>
 </section>
-  <style>
+
+<!-- ABOUT SECTION -->
+<section id="about" style="padding: 40px 20px; max-width: 800px; margin: auto;">
+  <h2 style="color:#4FA686; font-size:28px; font-weight:700; text-align:center; margin-bottom:25px;">
+    About FinTrust Creations
+  </h2>
+
+  <p style="font-size:17px; color:#444;">
+    FinTrust Creations is a professional digital initiative that empowers financial advisors with high-quality mutual fund calculators.
+  </p>
+
+  <p style="font-size:17px; color:#444;">
+    Our mission is to simplify financial planning through smart, mobile-responsive tools.
+  </p>
+</section>
+
+<style>
   :root {
     --btn-green:#00a37a;       /* SAME AS LANDING PAGE */
     --btn-green-dark:#008a62;  /* SAME AS LANDING PAGE HOVER */
@@ -350,7 +378,7 @@ p {
 
     <form
       id="contactForm"
-      action="mailto:fintrustcreations@gmail.com"
+      action="mailto:fintrustmf@gmail.com"
       method="POST"
       enctype="text/plain"
     >
@@ -377,47 +405,45 @@ p {
   ©️ <span id="year"></span> FinTrust Creations. All Rights Reserved.
 </footer>
 
+<!-- JS Preview Logic -->
 <script>
-// JS to switch previews
 const previewFrame = document.getElementById('previewFrame');
 const btn1 = document.getElementById('btn1');
 const btn2 = document.getElementById('btn2');
 
-function setActiveButton(activeBtn) {
-  [btn1, btn2].forEach(b => b.classList.remove('active'));
-  activeBtn.classList.add('active');
-}
+function setActive(b){ [btn1,btn2].forEach(x=>x.classList.remove("active")); b.classList.add("active"); }
 
-function showPreview(n) {
-  if (n === 1) {
-    // Preview 1 (original)
+function showPreview(n){
+  if(n===1){
     previewFrame.srcdoc = `
-      <html>
-      <body style="margin:0;padding:0;text-align:center;background:#fff;">
-        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQH6GbXa2Cat0J4QdSN_RRFGPIRlRtYCI5IsWHOOB1O-A31S2ANNOnrN5jOuZlkcLwckXotSnhZWlk-f8gjk2layMzycPVsN1Tj6WOF80uxpcJaYuJootQbIzfMntyBAa0FXAFm47xiqcInav7zOSDJPcvJ0qo0YI17UqucJ3wmbLvu0I5RvsW-T-8bFhi/s3453/IMG_4686.jpeg" style="width:100%;height:auto;display:block;" />
-      </body>
-      </html>
-    `;
-    setActiveButton(btn1);
+      <html><body style='margin:0'>
+      <img src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQH6GbXa2Cat0J4QdSN_RRFGPIRlRtYCI5IsWHOOB1O-A31S2ANNOnrN5jOuZlkcLwckXotSnhZWlk-f8gjk2layMzycPVsN1Tj6WOF80uxpcJaYuJootQbIzfMntyBAa0FXAFm47xiqcInav7zOSDJPcvJ0qo0YI17UqucJ3wmbLvu0I5RvsW-T-8bFhi/s3453/IMG_4686.jpeg' style='width:100%'>
+      </body></html>`;
+    setActive(btn1);
   } else {
-    // Preview 2 (second image)
     previewFrame.srcdoc = `
-      <html>
-      <body style="margin:0;padding:0;text-align:center;background:#fff;">
-        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhbdvbrkSGJMlgItGK6LNP3DFUOgroztEtiirUFkBLAslMBesosJYQb3xKq_Nxb_VHhEgJ4lHbjXPy2CTIJlERo8NKjVR-LkGdAki3vJhXaB646mGxKYLgTlXjt7vofxY4wzb9-lXLmLIxoQ-52E2pQfX_7OLclwLUbUHvwxrEyU3s85_V85oF5qsfEzLQy/s3293/IMG_4690.jpeg" style="width:100%;height:auto;display:block;" />
-      </body>
-      </html>
-    `;
-    setActiveButton(btn2);
+      <html><body style='margin:0'>
+      <img src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhbdvbrkSGJMlgItGK6LNP3DFUOgroztEtiirUFkBLAslMBesosJYQb3xKq_Nxb_VHhEgJ4lHbjXPy2CTIJlERo8NKjVR-LkGdAki3vJhXaB646mGxKYLgTlXjt7vofxY4wzb9-lXLmLIxoQ-52E2pQfX_7OLclwLUbUHvwxrEyU3s85_V85oF5qsfEzLQy/s3293/IMG_4690.jpeg' style='width:100%'>
+      </body></html>`;
+    setActive(btn2);
   }
 }
-
-// ensure default shows preview 1
 showPreview(1);
-
-// update year
 document.getElementById("year").textContent = new Date().getFullYear();
 </script>
-
+ 
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
+  link.addEventListener('click', () => {
+    const navbar = document.getElementById('mainMenu');
+    const bsCollapse = bootstrap.Collapse.getInstance(navbar);
+    if (bsCollapse) {
+      bsCollapse.hide(); // CLOSE MENU AFTER CLICK
+    }
+  });
+});
+</script>
 </body>
 </html>
